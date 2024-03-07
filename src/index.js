@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 
 const app = express();
+const PORT = 8080;
 const produtos = [];
 app.use(cors());
 
@@ -11,7 +12,7 @@ app.get("/", (req, res) => {
   return res.json("OK");
 });
 
-app.listen(8080, () => console.log("Servidor rodando na porta 8080"));
+app.listen(PORT, () => console.log("Servidor rodando na porta 8080"));
 
 //-------------------------criar produto-------------------------------
 
